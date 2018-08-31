@@ -1,0 +1,59 @@
+<script>
+_submit = function(racketNo) {
+  var target;
+  target = document.getElementById('player_search');
+  target.racket_id2.value = racketNo;
+  target.submit();
+};
+</script>
+<h1>テニスラケットナビ：自分にあったラケットをより早く見つける</h1>
+<h2>選手検索：選手を選択してください</h2>
+<h3>男子選手</h3>
+<div id="display_items">
+    <% @maleplayers.each do |player| %>
+        <li>
+            <div id="image_area">
+                <%= image_tag player.image.url(:medium) %>
+            </div>
+            <%= player.name %><br />
+            <%= player.nickname %>
+            <%= form_tag({ controller: :player_search, action: :search }, :method => :post) do %>
+                <%= hidden_field_tag :racket_id, player.racket_id %>
+                <%= submit_tag player.racket.name, :name => "submit_btn2", :id => "submit_btn2" %>
+            <% end %>
+        </li>
+    <% end %>
+</div>
+
+<h3>女子選手</h3>
+<div id="display_items">
+    <% @femaleplayers.each do |player| %>
+        <li>
+            <div id="image_area">
+                <%= image_tag player.image.url(:medium) %>
+            </div>
+            <%= player.name %><br />
+            <%= player.nickname %>
+            <%= form_tag({ controller: :player_search, action: :search }, :method => :post) do %>
+                <%= hidden_field_tag :racket_id, player.racket_id %>
+                <%= submit_tag player.racket.name, :name => "submit_btn2", :id => "submit_btn2" %>
+            <% end %>
+        </li>
+    <% end %>
+</div>
+
+<div id="display_items">
+    <%= form_tag({ controller: :player_search, action: :search }, :method => :post) do %>
+        <%= hidden_field_tag :racket_id2, 99999 %>
+        <% @maleplayers.each do |player| %>
+            <li>
+                <div id="image_area">
+                    <%= image_tag player.image.url(:medium) %>
+                </div>
+                <%= player.name %><br />
+                <%= player.nickname %>
+                <input nput type="button" name="btn" value=<%= player.racket.name %> onClick="_submit(<%= player.racket_id %>)" />
+            </li>
+        <% end %>
+    <% end %>
+</div>

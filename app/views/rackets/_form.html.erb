@@ -1,0 +1,127 @@
+<%= form_with(model: racket, local: true) do |form| %>
+  <% if racket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(racket.errors.count, "error") %> prohibited this racket from being saved:</h2>
+
+      <ul>
+      <% racket.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :名前 %>
+    <%= form.text_field :name, id: :racket_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :メーカーのid %>
+    <%= form.number_field :maker_id, id: :racket_maker_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :シリーズのid %>
+    <%= form.number_field :series_id, id: :racket_series_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :代表選手のid %>
+    <%= form.number_field :model_player_id, id: :racket_model_player_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :対象レベル %>
+    <%= form.number_field :level, id: :racket_level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :体力の評点 %>
+    <%= form.number_field :point_physical, id: :racket_point_physical %>
+  </div>
+
+  <div class="field">
+    <%= form.label :プレースタイルの評点 %>
+    <%= form.number_field :point_playing_style, id: :racket_point_playing_style %>
+  </div>
+
+  <div class="field">
+    <%= form.label :サポートの評点 %>
+    <%= form.number_field :point_support, id: :racket_point_support %>
+  </div>
+
+  <div class="field">
+    <%= form.label :スピンの評点 %>
+    <%= form.number_field :point_spin, id: :racket_point_spin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :打感の評点 %>
+    <%= form.number_field :point_feeling, id: :racket_point_feeling %>
+  </div>
+
+  <div class="field">
+    <%= form.label :重量 %>
+    <%= form.number_field :spec_weight, id: :racket_spec_weight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :面の大きさ %>
+    <%= form.number_field :spec_face, id: :racket_spec_face %>
+  </div>
+
+  <div class="field">
+    <%= form.label :厚さ %>
+    <%= form.text_field :spec_thickness, id: :racket_spec_thickness %>
+  </div>
+
+  <div class="field">
+    <%= form.label :バランス %>
+    <%= form.number_field :spec_balance, id: :racket_spec_balance %>
+  </div>
+
+  <div class="field">
+    <%= form.label :長さ %>
+    <%= form.number_field :spec_length, id: :racket_spec_length %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ストリングパターン %>
+    <%= form.text_field :spec_string_pattern, id: :racket_spec_string_pattern %>
+  </div>
+
+  <div class="field">
+    <%= form.label :モデル %>
+    <%= form.text_field :spec_model, id: :racket_spec_model %>
+  </div>
+
+  <div class="field">
+    <%= form.label :販売url %>
+    <%= form.text_field :url, id: :racket_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :価格 %>
+    <%= form.number_field :price, id: :racket_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ページ表示回数 %>
+    <%= form.number_field :page_count, id: :racket_page_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :おすすめガットのid %>
+    <%= form.number_field :string_id, id: :racket_string_id %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :写真 %>
+    <%= form.file_field :image %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

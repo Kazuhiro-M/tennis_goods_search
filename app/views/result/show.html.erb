@@ -1,0 +1,22 @@
+<% provide(:title, 'All rackets') %>
+<h1>検索結果</h1>
+
+<ul class="result">
+  <% @rackets.each do |racket| %>
+    <div id='spec_introduction'>
+      <li>
+        <%= image_tag racket.image.url(:medium) %><br />
+        名前：<%= racket.name %><br />
+        メーカー：<%= racket.series.maker.name %><br />
+        シリーズ：<%= racket.series.name %><br />
+        レベル：<%= racket.level %><br />
+        重さ：<%= racket.spec_weight %>g<br />
+        面の大きさ：<%= racket.spec_face %>平方インチ<br />
+        厚さ：<%= racket.spec_thickness %>mm<br />
+        バランス：<%= racket.spec_balance %>mm<br />
+        長さ：<%= racket.spec_length %>インチ<br />
+        ストリングスパターン：<%= racket.spec_string_pattern %><br />
+      </li>
+    </div>
+  <% end %>
+</ul>

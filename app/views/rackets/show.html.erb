@@ -1,0 +1,114 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @racket.name %>
+</p>
+
+<p>
+  <strong>Maker:</strong>
+  <%= @racket.maker_id %>
+</p>
+
+<p>
+  <strong>Series:</strong>
+  <%= @racket.series_id %>
+</p>
+
+<p>
+  <strong>Model player:</strong>
+  <%= @racket.model_player_id %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @racket.level %>
+</p>
+
+<p>
+  <strong>Point physical:</strong>
+  <%= @racket.point_physical %>
+</p>
+
+<p>
+  <strong>Point playing style:</strong>
+  <%= @racket.point_playing_style %>
+</p>
+
+<p>
+  <strong>Point support:</strong>
+  <%= @racket.point_support %>
+</p>
+
+<p>
+  <strong>Point spin:</strong>
+  <%= @racket.point_spin %>
+</p>
+
+<p>
+  <strong>Point feeling:</strong>
+  <%= @racket.point_feeling %>
+</p>
+
+<p>
+  <strong>Spec weight:</strong>
+  <%= @racket.spec_weight %>
+</p>
+
+<p>
+  <strong>Spec face:</strong>
+  <%= @racket.spec_face %>
+</p>
+
+<p>
+  <strong>Spec thickness:</strong>
+  <%= @racket.spec_thickness %>
+</p>
+
+<p>
+  <strong>Spec balance:</strong>
+  <%= @racket.spec_balance %>
+</p>
+
+<p>
+  <strong>Spec length:</strong>
+  <%= @racket.spec_length %>
+</p>
+
+<p>
+  <strong>Spec string pattern:</strong>
+  <%= @racket.spec_string_pattern %>
+</p>
+
+<p>
+  <strong>Spec model:</strong>
+  <%= @racket.spec_model %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @racket.url %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @racket.price %>
+</p>
+
+<p>
+  <strong>Page count:</strong>
+  <%= @racket.page_count %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @racket.string_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @racket.image.url(:medium) %>
+</p>
+
+<%= link_to 'Edit', edit_racket_path(@racket) %> |
+<%= link_to 'Back', rackets_path %>

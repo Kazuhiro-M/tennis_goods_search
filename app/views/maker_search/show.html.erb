@@ -1,0 +1,14 @@
+<h1>テニスラケットナビ：自分にあったラケットをより早く見つける</h1>
+<h2>メーカー検索：メーカーロゴを選択してください</h2>
+<%= form_tag({ controller: :maker_search, action: :search }, :method => :post) do %>
+    <div id="item_wrap">
+        <%= submit_tag "babolat", :name => "babolat", :id => "submit_btn" %>
+        <%= submit_tag "head", :name => "head", :id => "submit_btn" %>
+        <%= submit_tag "prince", :name => "prince", :id => "submit_btn" %>
+    </div>
+    <div id="item_wrap">
+        <%= submit_tag "srixon", :name => "srixon", :id => "submit_btn" %>
+        <%= submit_tag "wilson", :name => "wilson", :id => "submit_btn" %>
+        <%= submit_tag "yonex", :name => "yonex", :id => "submit_btn" %>
+    </div>
+<% end %>

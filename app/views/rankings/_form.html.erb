@@ -1,0 +1,42 @@
+<%= form_with(model: ranking, local: true) do |form| %>
+  <% if ranking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ranking.errors.count, "error") %> prohibited this ranking from being saved:</h2>
+
+      <ul>
+      <% ranking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :年 %>
+    <%= form.number_field :ranking_year, id: :ranking_ranking_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :月 %>
+    <%= form.number_field :ranking_month, id: :ranking_ranking_month %>
+  </div>
+
+  <div class="field">
+    <%= form.label :週 %>
+    <%= form.number_field :ranking_week, id: :ranking_ranking_week %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ランク %>
+    <%= form.number_field :rank, id: :ranking_rank %>
+  </div>
+
+  <div class="field">
+    <%= form.label :対象ラケットのid %>
+    <%= form.number_field :racket_id, id: :ranking_racket_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

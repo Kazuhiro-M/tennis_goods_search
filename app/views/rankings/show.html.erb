@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ranking year:</strong>
+  <%= @ranking.ranking_year %>
+</p>
+
+<p>
+  <strong>Ranking month:</strong>
+  <%= @ranking.ranking_month %>
+</p>
+
+<p>
+  <strong>Ranking week:</strong>
+  <%= @ranking.ranking_week %>
+</p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @ranking.rank %>
+</p>
+
+<p>
+  <strong>Racket:</strong>
+  <%= @ranking.racket_id %>
+</p>
+
+<%= link_to 'Edit', edit_ranking_path(@ranking) %> |
+<%= link_to 'Back', rankings_path %>

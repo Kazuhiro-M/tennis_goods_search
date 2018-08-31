@@ -1,0 +1,29 @@
+// Place all the styles related to the player_search controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#display_items {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(5, 200px);
+}
+
+#image_area {
+    height: 150px;
+    width: 200px;
+}
+
+#submit_btn2 {
+    font-weight: bold;
+    color: white;
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    line-height: 10px;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    background: gray;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px; 
+    border-radius: 10px;
+}

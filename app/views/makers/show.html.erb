@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @maker.name %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @maker.url %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @maker.image.url(:medium) %>
+</p>
+
+<%= link_to 'Edit', edit_maker_path(@maker) %> |
+<%= link_to 'Back', makers_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ranking_year: 1
+  ranking_month: 1
+  ranking_week: 1
+  rank: 1
+  racket_id: 1
+
+two:
+  ranking_year: 1
+  ranking_month: 1
+  ranking_week: 1
+  rank: 1
+  racket_id: 1

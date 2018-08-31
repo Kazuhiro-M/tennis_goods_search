@@ -1,0 +1,32 @@
+<%= form_with(model: maker, local: true) do |form| %>
+  <% if maker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(maker.errors.count, "error") %> prohibited this maker from being saved:</h2>
+
+      <ul>
+      <% maker.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :名前%>
+    <%= form.text_field :name, id: :maker_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :メーカーページのURL %>
+    <%= form.text_field :url, id: :maker_url %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :写真 %>
+    <%= form.file_field :image %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

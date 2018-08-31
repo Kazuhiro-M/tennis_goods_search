@@ -1,0 +1,47 @@
+<%= form_with(model: player, local: true) do |form| %>
+  <% if player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(player.errors.count, "error") %> prohibited this player from being saved:</h2>
+
+      <ul>
+      <% player.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :名前 %>
+    <%= form.text_field :name, id: :player_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :あだ名 %>
+    <%= form.text_field :nickname, id: :player_nickname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :性別 %>
+    <%= form.number_field :sex, id: :player_sex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :国籍 %>
+    <%= form.number_field :nationality, id: :player_nationality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :使用ラケットのid %>
+    <%= form.number_field :racket_id, id: :player_racket_id %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :写真 %>
+    <%= form.file_field :image %>
+  </div>
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

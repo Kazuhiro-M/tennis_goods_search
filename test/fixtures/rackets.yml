@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  maker_id: 1
+  series_id: 1
+  model_player_id: 1
+  level: 1
+  point_physical: 1
+  point_playing_style: 1
+  point_support: 1
+  point_spin: 1
+  point_feeling: 1
+  spec_weight: 1
+  spec_face: 1
+  spec_thickness: MyString
+  spec_balance: 1
+  spec_length: 1
+  spec_string_pattern: MyString
+  spec_model: MyString
+  url: MyString
+  price: 1
+  page_count: 1
+  string_id: 1
+
+two:
+  name: MyString
+  maker_id: 1
+  series_id: 1
+  model_player_id: 1
+  level: 1
+  point_physical: 1
+  point_playing_style: 1
+  point_support: 1
+  point_spin: 1
+  point_feeling: 1
+  spec_weight: 1
+  spec_face: 1
+  spec_thickness: MyString
+  spec_balance: 1
+  spec_length: 1
+  spec_string_pattern: MyString
+  spec_model: MyString
+  url: MyString
+  price: 1
+  page_count: 1
+  string_id: 1
